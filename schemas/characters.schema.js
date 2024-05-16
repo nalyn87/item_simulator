@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const characters_schemas = new mongoose.Schema({
+const CharactersSchemas = new mongoose.Schema({
     character_id: Number,
     name: {
         type: String,
@@ -8,7 +8,9 @@ const characters_schemas = new mongoose.Schema({
         unique: true, // 중복 안됨
     },
     health: Number,
-    power: Number
-});
+    power: Number,
+},
+{versionKey: false}
+);
 
-export default mongoose.model('Character', characters_schemas);
+export default mongoose.model('Character', CharactersSchemas);
