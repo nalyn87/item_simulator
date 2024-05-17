@@ -16,6 +16,6 @@
 | 아이템 생성 | /api/items | POST | {     "item\_code": 4,     "item\_name": "파멸의 반지",     "item\_stat": { "health": 20, "power": 2 }   } | {     "message": "새로운 아이템 파멸의 반지 을/를 생성하셨습니다!",     "item\_code": 4   } |
 | 아이템 수정 | /api/items/:item\_code | PATCH | {     "item\_name": "파멸의 반지",     "item\_stat": { "health": 10, "power": 2 }   } | {     "message": "아이템 '파멸의 반지123'이/가 수정되었습니다!",     "baseItem": "변경 전: 파멸의 반지123, { health: 100, power: 20 }",     "patchedItem": "변경 후: 파멸의 반지, { health: 10, power: 2 }"   } |
 | 아이템 전체 조회 | /api/items | GET | {} | {     "item": \[       {         "item\_code": 4,         "item\_name": "파멸의 반지"       }     \]   } |
-| 아이템 상세 조회 | /api/items /:item\_code | GET | {} | {     "item": {       "item\_stat": {         "health": 100,         "power": 20       },       "item\_code": 4,       "item\_name": "파멸의 반지123"     }   } |
+| 아이템 상세 조회 | /api/items /:item\_code | GET | {} | {     "item": {       "item\_stat": {         "health": 100,         "power": 20       },       "item\_code": 4,       "item\_name": "파멸의 반지"     }   } |
 
 -   아이템 탈/장착 구현 X
